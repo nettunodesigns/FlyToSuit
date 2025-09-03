@@ -1,0 +1,132 @@
+/* Micro-entrance animations */
+@keyframes upIn { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+:root {
+  --marrone: #3A2A1D;
+  --azzurro: #A1C7E0;
+  --cappuccino: #B17F4A;
+  --biancastro: #F8F5F2;
+  --bianco: #FFFFFF;
+  --nero: #2A2A2A;
+  --giallo: #ffd700;
+  --verde: #38b11a;
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  margin: 0px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+.hero #header{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  gap: 58px;
+}
+
+.hero #header .btn-line{
+  opacity: 0;
+  animation: upIn .5s var(--ease) .05s both;
+}
+
+.hero #aereo{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero #bordi{
+  position: absolute;
+  background-color: #00000000;
+  width: 97.5%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: 4px solid white;
+  border-radius: 44px;
+  z-index: 1;
+  animation: fadeIn 1s var(--ease);
+}
+
+.hero #ombra{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.18) 35%, rgba(0,0,0,.35));
+  animation: fadeIn .6s var(--ease);
+}
+
+.hero #slogan{
+  position: absolute;
+  top: 12%;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(81px, 5.5vw, 56px);
+  text-shadow: 0 14px 34px rgba(0,0,0,.95), 0 4px 12px rgba(0,0,0,.95);
+  color: var(--bianco);
+  font-family: "Sansita", sans-serif;
+  font-style: normal;
+
+  opacity: 0;
+  animation: upIn .6s var(--ease) .1s both;
+}
+
+.verde{
+  color: var(--verde);
+}
+
+.hero #desc{
+  position: absolute;
+  color: var(--biancastro);
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  font-weight: 700;
+  opacity: 0;
+  animation: upIn .6s var(--ease) .25s both;
+}
+
+.hero #pulsante-lingua{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70%;
+  width: 100%;
+}
+
+.hero .language-selector{
+  opacity: 0;
+  animation: upIn .5s var(--ease) .32s both;
+}
+
+.hero .booking-form{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-section:nth-child(1) { animation: upIn .5s var(--ease) .4s both; }
+.form-section:nth-child(2) { animation: upIn .5s var(--ease) .48s both; }
+.form-section:nth-child(3) { animation: upIn .5s var(--ease) .56s both; }
+.form-section:nth-child(4) { animation: upIn .5s var(--ease) .64s both; }
+.book-button { animation: upIn .55s var(--ease) .72s both; }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/hero.css">
+
+  <link rel="stylesheet" href="styles/components/btn-line.css">
+  <link rel="stylesheet" href="styles/components/btn-shine.css">
+  <link rel="stylesheet" href="styles/components/language-selector.css">
+  <link rel="stylesheet" href="styles/components/booking-form.css">
+</head>
+
+<body>
+  <div class="hero">
+    <div id="bordi"></div>
+    <div id="ombra"></div>
+    <nav id="header">
+      <a class="btn-line">ROOMS</a>
+      <a class="btn-line">ABOUT US</a>
+      <a class="btn-line">CONTACT</a>
+    </nav>
+    <img id="aereo" src="src/img/hero.jpg">
+    <h1 id="slogan" class="animazione-upIn">Your Home<br>Far From <a class="verde">Home</a></h1>
+    <p id="desc">Dream apartments just 5 minutes from Bologna Marconi Airport and convenient to all amenities<p>
+
+    <div id="pulsante-lingua">
+      <div class="language-selector">
+          <button class="language-button us" id="languageButton">
+              <span class="language-text">Language</span>
+          </button>
+          <div class="language-dropdown">
+              <div class="language-option" onclick="changeLanguage('us', 'English')">
+                  <div class="flag-icon flag-us"></div>
+                  <span>English</span>
+              </div>
+              <div class="language-option" onclick="changeLanguage('it', 'Italiano')">
+                  <div class="flag-icon flag-it"></div>
+                  <span>Italiano</span>
+              </div>
+              <div class="language-option" onclick="changeLanguage('es', 'Español')">
+                  <div class="flag-icon flag-es"></div>
+                  <span>Español</span>
+              </div>
+              <div class="language-option" onclick="changeLanguage('fr', 'Français')">
+                  <div class="flag-icon flag-fr"></div>
+                  <span>Français</span>
+              </div>
+              <div class="language-option" onclick="changeLanguage('de', 'Deutsch')">
+                  <div class="flag-icon flag-de"></div>
+                  <span>Deutsch</span>
+              </div>
+              <div class="language-option" onclick="changeLanguage('pt', 'Português')">
+                  <div class="flag-icon flag-pt"></div>
+                  <span>Português</span>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!--BOOKING-->
+    <div class="booking-form">
+        <div class="form-section">
+          <img src="styles/components/icons/house.svg">
+            <div class="content">
+                <span class="label">Room</span>
+                <div class="value">
+                    Pine Log
+                    <img src="styles/components/icons/dropdown-arrow.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <img src="styles/components/icons/calendar.svg">
+            <div class="content">
+              <span class="label">Check-in</span>
+              <div class="value">15 Mar 2025</div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <img src="styles/components/icons/calendar.svg">
+            <div class="content">
+              <span class="label">Check-out</span>
+              <div class="value">30 Mar 2025</div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <img src="styles/components/icons/people.svg">
+            <div class="content">
+              <span class="label">Guests</span>
+              <div class="value">4 Adults</div>
+            </div>
+        </div>
+
+        <button class="book-button">Book Your Stay</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

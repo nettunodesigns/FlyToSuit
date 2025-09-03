@@ -1,0 +1,106 @@
+.booking-form {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px;
+    gap: 2px;
+    /* Added shadow effect to replace container background */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.form-section {
+    flex: 1;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 16px;
+}
+
+.form-section:hover {
+    background-color: #f8f9fa;
+}
+
+.form-section:not(:last-child) {
+    border-right: 1px solid #e9ecef;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: #6c757d;
+    flex-shrink: 0;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+.label {
+    font-size: 12px;
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.value {
+    font-size: 14px;
+    color: #212529;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-arrow {
+    width: 12px;
+    height: 12px;
+    color: #6c757d;
+}
+
+.book-button {
+    background-color: var(--verde);
+    color: var(--nero);
+    border: none;
+    border-radius: 16px;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.book-button:hover {
+    background-color:#000000;
+    color: var(--verde);
+    transform: translateY(-1px);
+}
+
+.book-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .booking-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form-section {
+        border-right: none !important;
+        border-bottom: 1px solid #e9ecef;
+        width: 100%;
+    }
+
+    .form-section:last-of-type {
+        border-bottom: none;
+    }
+}
