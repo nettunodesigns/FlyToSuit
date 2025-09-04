@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/hero.css">
 
   <link rel="stylesheet" href="styles/components/btn-line.css">
   <link rel="stylesheet" href="styles/components/btn-shine.css">
   <link rel="stylesheet" href="styles/components/language-selector.css">
   <link rel="stylesheet" href="styles/components/booking-form.css">
   <link rel="stylesheet" href="styles/components/counter.css">
-  <link rel="stylesheet" href="styles/components/roomsWidget.css">
-  <link rel="stylesheet" href="styles/hero.css">
-
+  <link rel="stylesheet" href="styles/components/rooms-widget.css">
 </head>
 
 
@@ -33,7 +32,7 @@
     <div id="pulsante-lingua">
       <div class="language-selector">
           <button class="language-button us" id="languageButton">
-              <span class="language-text">Language</span>
+              <span class="language-text"></span>
           </button>
           <div class="language-dropdown">
               <div class="language-option" onclick="changeLanguage('us', 'English')">
@@ -66,62 +65,61 @@
 
     <!--BOOKING-->
     <div class="booking-form">
-        <div class="form-section">
-          <img src="styles/components/icons/house.svg">
-            <div class="content">
-                <span class="label">Room</span>
-                <div class="value">
-                    Pine Log
-                    <img src="styles/components/icons/dropdown-arrow.svg">
-                </div>
-            </div>
-        </div>
+      <div class="form-section">
+        <img src="styles/components/icons/house.svg">
+          <div class="content">
+              <span class="label">Room</span>
+              <div class="value">
+                  Pine Log
+                  <img src="styles/components/icons/dropdown-arrow.svg">
+              </div>
+          </div>
+      </div>
 
-        <div class="form-section">
-            <img src="styles/components/icons/calendar.svg">
-            <div class="content">
-              <span class="label">Check-in</span>
-              <div class="value">15 Mar 2025</div>
-            </div>
-        </div>
+      <div class="form-section">
+          <img src="styles/components/icons/calendar.svg">
+          <div class="content">
+            <span class="label">Check-in</span>
+            <div class="value">15 Mar 2025</div>
+          </div>
+      </div>
 
-        <div class="form-section">
-            <img src="styles/components/icons/calendar.svg">
-            <div class="content">
-              <span class="label">Check-out</span>
-              <div class="value">30 Mar 2025</div>
-            </div>
-        </div>
+      <div class="form-section">
+          <img src="styles/components/icons/calendar.svg">
+          <div class="content">
+            <span class="label">Check-out</span>
+            <div class="value">30 Mar 2025</div>
+          </div>
+      </div>
 
-        <div class="form-section">
-            <img src="styles/components/icons/people.svg">
-            <div class="content">
-              <span class="label">Guests</span>
-              <div class="value">4 Adults</div>
-            </div>
-        </div>
+      <div class="form-section">
+          <img src="styles/components/icons/people.svg">
+          <div class="content">
+            <span class="label">Guests</span>
+            <div class="value">4 Adults</div>
+          </div>
+      </div>
 
-        <button class="book-button">Book Your Stay</button>
+      <button class="book-button">Book Your Stay</button>
     </div>
   </div>
   <!--FINE HERO-->
 
   <!--INIZIO ROOMS-->
   <div class="rooms">
-    <div class="split">
+    <div class="splits">
 
       <!--SPLIT LEFT-->
       <div class="split-left">
-
         <!--COUNTER-->
         <div class="counter">
           <div class="counter-element">
             <img src="/src/svg/bed.svg" class="bed-icon" alt="Beds icon">
             <div class="counter-content">
-                <div class="counter-number"></div>
-                <div class="rooms-title sansita-bold title-sub counter-label" style="width: auto;">Beds</div>
+              <div class="counter-number"></div>
+              <div class="rooms-title sansita-bold title-sub counter-label">Beds</div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
 
@@ -129,30 +127,43 @@
 
       <!--SPLIT RIGHT-->
       <div class="split-right">
-        <h2 class="Premium"><a class="btn-shine Shinytext"> Premium </a> <br> <a class="subtitle">Accomodation</a></h2>
+        <h2 id="title">
+          <a class="shinytext btn-shine">Premium</a> 
+          <br> 
+          <a class="subtitle">Accomodation</a>
+        </h2>
         <p id="desc_2">Are you looking for a welcoming and distinctive room, where every space has its own character? We offer rooms for rent, each unique, designed to meet your every need for comfort and style.</p>
-
       </div>
     </div>   
 
     <!--PULSANTE STANZE-->
-    <div id="pulsante-stanze">
-      <div class="background-slider">
-        <div class="background-image"></div>
-        <div class="background-image"></div>
-        <div class="background-image"></div>
+    <div class="rooms-widget-container">
+      <div class="rooms-widget">
+        <div class="background-slider">
+          <div class="background-image"></div>
+          <div class="background-image"></div>
+          <div class="background-image"></div>
+        </div>
+        
+        <div class="content">
+          <h2 class="rooms-text">Rooms</h2>
+        </div>
+        
+        <div class="indicator-dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
     </div>
-    <div class="content">
-        <h2 class="rooms-text">Rooms</h2>
-    </div>
-    <div class="indicator-dots">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-    </div>
-
   </div>
+  <!--FINE ROOMS-->
+  
+  <!--INIZIO ABOUT US-->
+  <div class="about-us">
+    <img src="src/img/aboutUs.jpg">
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

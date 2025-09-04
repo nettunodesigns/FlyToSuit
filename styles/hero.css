@@ -55,7 +55,7 @@ body{
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -83,8 +83,8 @@ body{
   animation: fadeIn .6s var(--ease);
 }
 
-.hero #slogan{
-  position: absolute;
+.hero #slogan, .about-us #slogan{
+  position: relative;
   top: 12%;
   width: 100%;
   text-align: center;
@@ -103,12 +103,12 @@ body{
   color: var(--verde);
 }
 
-.hero #desc{
-  position: absolute;
+.hero #desc, .about-us #desc{
+  position: relative;
   color: var(--biancastro);
   width: 100%;
   text-align: center;
-  top: 40%;
+  top: 7%;
   font-weight: 700;
   opacity: 0;
   animation: upIn .6s var(--ease) .25s both;
@@ -136,57 +136,61 @@ body{
   transform: translateX(-50%);
 }
 
+.form-section:nth-child(1) { animation: upIn .5s var(--ease) .4s both; }
+.form-section:nth-child(2) { animation: upIn .5s var(--ease) .48s both; }
+.form-section:nth-child(3) { animation: upIn .5s var(--ease) .56s both; }
+.form-section:nth-child(4) { animation: upIn .5s var(--ease) .64s both; }
+.book-button { animation: upIn .55s var(--ease) .72s both; }
+
 /* ROOMS */
 .rooms{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20% 40px 20%;
+
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-color: var(--nero);
 }
 
-.rooms .split{
-  width: min(1200px, 92%); 
-  margin: 0 auto auto auto; 
+.rooms .splits{
+  width: calc(100%-100px); 
   display: grid; 
-  grid-template-columns: 1fr 1px 1fr; 
-  align-items: center; 
-  gap: 32px; 
-  transform: translateY(30%);
+  grid-template-columns: 1fr 100px 1fr; 
 }
 
 .rooms .split-left{
-  display: flex; justify-content: center;
+  display: flex; 
+  justify-content: center;
 }
 
-.divider-line{
-  width: 1px; height: 180px; 
+.rooms .divider-line{
+  width: 1px; 
   background: linear-gradient(180deg, rgba(255,255,255,.15), rgba(255,255,255,.55), rgba(255,255,255,.15)); 
-  margin: 0 auto; 
+  margin: 0 50px 0 50px; 
 }
 
 .rooms .split-right{ 
-  color: #ffffff; text-align: center; 
-  display: flex; flex-direction: column; 
-  align-items: flex-start; justify-content: center; 
+  color: var(--bianco); 
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 1.4rem;
 }
 
-.Shinytext{
-  transform: translateY(-30%);
-color: #fff;
-background: linear-gradient(to right, #1eea57 0, #fff 10%, #38b11a 20%);
-background-clip: text;
-font-weight: 700;
-font-size: 1.6em;
+.rooms .split-right #title{
+  margin: 0;
 }
 
-.Premium{
-  font-size:1.5em;
-  width: 100%;
-  height: 10vh;
-  display:flex;
-  flex-direction: column;
-  font-size: 1.5em;
-  font-weight: bold;
-  align-items: center;
+.shinytext{
+  background: linear-gradient(to left, var(--verde)40%, var(--biancastro)50%, var(--verde)60%);
+  font-weight: 700;
+  font-size: 1.6em;
 }
 
 .subtitle{
@@ -195,14 +199,31 @@ font-size: 1.6em;
 }
 
 #desc_2{
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
-  color: rgba(255,255,255,.86);
+  opacity: 0.8;
+  color: var(--bianco);
   font-weight: bold;
 }
 
-.form-section:nth-child(1) { animation: upIn .5s var(--ease) .4s both; }
-.form-section:nth-child(2) { animation: upIn .5s var(--ease) .48s both; }
-.form-section:nth-child(3) { animation: upIn .5s var(--ease) .56s both; }
-.form-section:nth-child(4) { animation: upIn .5s var(--ease) .64s both; }
-.book-button { animation: upIn .55s var(--ease) .72s both; }
+.background-image:nth-child(1) {background-image: url('../src/img/camera1.jpeg');}
+.background-image:nth-child(2) {background-image: url('../src/img/camera2.jpeg');}
+.background-image:nth-child(3) {background-image: url('../src/img/camera3.jpeg');}
+
+
+.about-us{
+  position: static;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+.about-us img{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: -1;
+  filter: brightness(0.7) saturate(0.95);
+}

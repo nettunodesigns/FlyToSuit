@@ -1,26 +1,18 @@
-/* From Uiverse.io by neerajbaniwal */ 
 .btn-shine {
-  position: absolute;
-  color: #fff;
-  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
-  background-position: 0;
+  background-position: 0%;
+  background-size: inherit;
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 3s infinite linear;
+  animation: shine 6s infinite linear;
   animation-fill-mode: forwards;
   -webkit-text-size-adjust: none;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
   white-space: nowrap;
-  font-family: "Poppins", sans-serif;
 }
 @keyframes shine {
   0% {
-    background-position: 0;
+    background-position: 120%;
   }
   100% {
-    background-position: 230px;
+    background-position: 0%;
   }
 }
