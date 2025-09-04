@@ -1,0 +1,70 @@
+/* Counter styles (from Svgs/Letti/style.css) */
+.counter-element { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px;
+}
+.bed-icon { 
+    width: 190px; 
+    height: 190px; 
+    flex-shrink: 0; 
+}
+.counter-content { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+.counter-number { 
+    font-size: 4.5rem; 
+    font-weight: bold; 
+    color: #38b11a ; 
+    position: relative; 
+    overflow: hidden; 
+}
+.counter-number::before { 
+    content: counter(num); 
+    counter-reset: num var(--num); 
+    animation: count 3s ease-out forwards; 
+}
+.counter-number::after { 
+    content: '+'; opacity: 0; 
+    animation: showPlus 0.3s ease-in 3s forwards; 
+    margin-left: 4px; 
+}
+
+
+@keyframes count { 0% { --num: 0; } 100% { --num: 25; } }
+@keyframes showPlus { to { opacity: 1; } }
+@property --num { syntax: '<integer>'; initial-value: 0; inherits: false; }
+.counter-label {inherits: false; font-size: 3rem; color: #F3F3F3; margin-top: 4px; opacity: 0; animation: showLabel 0.3s ease-in 2.3s forwards; }
+@keyframes showLabel { to { opacity: 1; } }
+@supports not (background: paint(something)) {
+.counter-number::before { animation: countFallback 2.3s ease-out forwards; }
+@keyframes countFallback { 
+  0% { content: '0'; } 
+  4% { content: '1'; }
+  8% { content: '2'; } 
+  12% { content: '3'; } 
+  16% { content: '4'; } 
+  20% { content: '5'; } 
+  24% { content: '6'; } 
+  28% { content: '7'; } 
+  32% { content: '8'; } 
+  36% { content: '9'; } 
+  40% { content: '10'; } 
+  44% { content: '11'; } 
+  48% { content: '12'; } 
+  52% { content: '13'; } 
+  56% { content: '14'; } 
+  60% { content: '15'; } 
+  64% { content: '16'; } 
+  68% { content: '17'; } 
+  72% { content: '18'; } 
+  76% { content: '19'; } 
+  80% { content: '20'; } 
+  84% { content: '21'; } 
+  88% { content: '22'; } 
+  92% { content: '23'; } 
+  96% { content: '24'; } 
+  100% { content: '25'; } 
+}

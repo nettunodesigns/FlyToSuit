@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/hero.css">
 
   <link rel="stylesheet" href="styles/components/btn-line.css">
   <link rel="stylesheet" href="styles/components/btn-shine.css">
   <link rel="stylesheet" href="styles/components/language-selector.css">
   <link rel="stylesheet" href="styles/components/booking-form.css">
+  <link rel="stylesheet" href="styles/components/counter.css">
+  <link rel="stylesheet" href="styles/components/roomsWidget.css">
+  <link rel="stylesheet" href="styles/hero.css">
+
 </head>
+
 
 <body>
   <!--INIZIO HERO-->
@@ -109,9 +113,15 @@
       <!--SPLIT LEFT-->
       <div class="split-left">
 
-        <!--SVG COUNTER-->
-        <div class="svg-counter">
-
+        <!--COUNTER-->
+        <div class="counter">
+          <div class="counter-element">
+            <img src="/src/svg/bed.svg" class="bed-icon" alt="Beds icon">
+            <div class="counter-content">
+                <div class="counter-number"></div>
+                <div class="rooms-title sansita-bold title-sub counter-label" style="width: auto;">Beds</div>
+            </div>
+        </div>
         </div>
       </div>
 
@@ -119,7 +129,7 @@
 
       <!--SPLIT RIGHT-->
       <div class="split-right">
-        <h2 class="Premium"><a class="FILLCLASS"> Premium <br></a> Accomodation</h2>
+        <h2 class="Premium"><a class="btn-shine Shinytext"> Premium </a> <br> <a class="subtitle">Accomodation</a></h2>
         <p id="desc_2">Are you looking for a welcoming and distinctive room, where every space has its own character? We offer rooms for rent, each unique, designed to meet your every need for comfort and style.</p>
 
       </div>
@@ -127,7 +137,19 @@
 
     <!--PULSANTE STANZE-->
     <div id="pulsante-stanze">
-
+      <div class="background-slider">
+        <div class="background-image"></div>
+        <div class="background-image"></div>
+        <div class="background-image"></div>
+    </div>
+    <div class="content">
+        <h2 class="rooms-text">Rooms</h2>
+    </div>
+    <div class="indicator-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
     </div>
 
   </div>
