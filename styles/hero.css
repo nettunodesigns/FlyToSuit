@@ -23,6 +23,31 @@ body{
   --ease: cubic-bezier(.22,.61,.36,1);
 }
 
+#slogan{
+  position: absolute;
+  top: 12%;
+  width: 100%;
+  font-weight: 700;
+  font-size: clamp(81px, 5.5vw, 56px);
+  text-shadow: 0 14px 34px rgba(0,0,0,.95), 0 4px 12px rgba(0,0,0,.95);
+  color: var(--bianco);
+  font-family: "Sansita", sans-serif;
+  font-style: normal;
+  animation: upIn .6s var(--ease) .1s both;
+}
+
+.verde{
+  color: var(--verde);
+}
+
+#desc{
+  position: absolute;
+  color: var(--biancastro);
+  top: 40%;
+  font-weight: 700;
+  animation: upIn .6s var(--ease) .25s both;
+}
+
 /* Micro-entrance animations */
 @keyframes upIn { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -84,32 +109,13 @@ body{
   animation: fadeIn .6s var(--ease);
 }
 
-#slogan{
-  position: absolute;
-  top: 12%;
-  width: 100%;
+.hero #slogan{
   text-align: center;
-  font-weight: 700;
-  font-size: clamp(81px, 5.5vw, 56px);
-  text-shadow: 0 14px 34px rgba(0,0,0,.95), 0 4px 12px rgba(0,0,0,.95);
-  color: var(--bianco);
-  font-family: "Sansita", sans-serif;
-  font-style: normal;
-  animation: upIn .6s var(--ease) .1s both;
 }
 
-.verde{
-  color: var(--verde);
-}
-
-#desc{
-  position: absolute;
-  color: var(--biancastro);
-  width: 100%;
+.hero #desc{
   text-align: center;
-  top: 40%;
-  font-weight: 700;
-  animation: upIn .6s var(--ease) .25s both;
+  width: 100%;
 }
 
 .hero #pulsante-lingua{
@@ -226,6 +232,11 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.about-us #desc{
+    width: 50%;
+    font-size: large;
 }
 
 footer{
