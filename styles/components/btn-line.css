@@ -15,12 +15,14 @@
 }
 
 .btn-line:focus,
-.btn-line:hover {
+.btn-line:hover,
+.btn-line:active {
   color: #fff;
 }
 
 .btn-line:focus:after,
-.btn-line:hover:after {
+.btn-line:hover:after,
+.btn-line:active:after {
   width: 100%;
   left: 0%;
 }

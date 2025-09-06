@@ -7,6 +7,10 @@
 function changeLanguage(countryCode, languageName) {
     const button = document.getElementById('languageButton');
     button.className = `language-button ${countryCode}`;
+
+    // Close dropdown after language selection
+    const selector = document.querySelector('.language-selector');
+    selector.classList.remove('dropdown-open');
 }
 
 // Counter animation trigger on scroll
@@ -43,5 +47,37 @@ function initCounterAnimation() {
     observer.observe(counter);
 }
 
+// Language dropdown functionality
+function initLanguageDropdown() {
+    const languageButton = document.getElementById('languageButton');
+    const languageSelector = document.querySelector('.language-selector');
+
+    if (!languageButton || !languageSelector) return;
+
+    // Toggle dropdown on button click
+    languageButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        languageSelector.classList.toggle('dropdown-open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!languageSelector.contains(e.target)) {
+            languageSelector.classList.remove('dropdown-open');
+        }
+    });
+
+    // Prevent dropdown from closing when clicking inside it
+    const dropdown = languageSelector.querySelector('.language-dropdown');
+    if (dropdown) {
+        dropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+}
+
 // Initialize counter animation when DOM is loaded
-document.addEventListener('DOMContentLoaded', initCounterAnimation);
+document.addEventListener('DOMContentLoaded', function() {
+    initCounterAnimation();
+    initLanguageDropdown();
+});

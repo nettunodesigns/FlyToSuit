@@ -51,7 +51,8 @@
     }
 }
 
-.rooms-widget:hover .background-image {
+.rooms-widget:hover .background-image,
+.rooms-widget:active .background-image {
     filter: grayscale(0%);
     opacity: 0.7;
     transform: scale(1.05);
@@ -87,7 +88,8 @@
     transform: translateX(-50%);
 }
 
-.rooms-widget:hover .rooms-text::after {
+.rooms-widget:hover .rooms-text::after,
+.rooms-widget:active .rooms-text::after {
     width: 100%;
 }
 

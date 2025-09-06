@@ -82,5 +82,41 @@
   88% { content: '22'; } 
   92% { content: '23'; } 
   96% { content: '24'; } 
-  100% { content: '25'; } 
-}}
+  100% { content: '25'; }
+}
+
+/* Responsive Design for Counter */
+@media (max-width: 768px) {
+  .bed-icon {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .counter-number {
+    font-size: 3rem !important;
+  }
+
+  .counter-label {
+    font-size: 2rem !important;
+  }
+
+  .counter-element {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bed-icon {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .counter-number {
+    font-size: 2.5rem !important;
+  }
+
+  .counter-label {
+    font-size: 1.5rem !important;
+  }
+}

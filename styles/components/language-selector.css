@@ -92,7 +92,7 @@
     z-index: 10;
 }
 
-.language-selector:hover .language-dropdown {
+.language-selector.dropdown-open .language-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0) rotateX(0deg);
@@ -132,3 +132,48 @@
 .flag-fr, .language-button.fr{ background-image: url('icons/flags/fr.svg'); }
 .flag-de, .language-button.de{ background-image: url('icons/flags/de.svg'); }
 .flag-pt, .language-button.pt{ background-image: url('icons/flags/pt.svg'); }
+
+/* Touch-friendly styles for mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  /* On touch devices, make active states more prominent */
+  .language-button:active {
+    transform: translateZ(5px) rotateX(8deg);
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.3),
+        0 3px 3px rgba(0,0,0,0.2);
+  }
+
+  .language-button:active::before {
+    opacity: 1;
+  }
+
+  .language-button:active .language-text {
+    opacity: 0;
+  }
+
+  .language-option:active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+  }
+}
+
+/* Enhanced active states for better touch feedback */
+.language-button:active {
+  transform: translateZ(5px) rotateX(8deg) !important;
+  box-shadow:
+      0 5px 15px rgba(0,0,0,0.3),
+      0 3px 3px rgba(0,0,0,0.2) !important;
+}
+
+.language-button:active::before {
+  opacity: 1 !important;
+}
+
+.language-button:active .language-text {
+  opacity: 0 !important;
+}
+
+.language-option:active {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateX(5px) !important;
+}
