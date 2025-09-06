@@ -176,6 +176,10 @@ body{
   justify-content: center;
 }
 
+.counter-content{
+  width: 100px;
+}
+
 .rooms .divider-line{
   width: 1px; 
   background: linear-gradient(180deg, rgba(255,255,255,.15), rgba(255,255,255,.55), rgba(255,255,255,.15)); 
@@ -197,7 +201,7 @@ body{
 }
 
 .shinytext{
-  background: linear-gradient(to left, var(--verde)40%, var(--biancastro)50%, var(--verde)60%);
+  background: linear-gradient(to left, var(--verde)45%, var(--biancastro)50%, var(--verde)55%);
   font-weight: 700;
   font-size: 1.6em;
 }

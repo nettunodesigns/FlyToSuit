@@ -1,4 +1,9 @@
 /* Counter styles (from Svgs/Letti/style.css) */
+:root {
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+
+@keyframes upIn { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
 .counter-element { 
     display: flex; 
     align-items: center; 
@@ -14,32 +19,43 @@
     flex-direction: column; 
     align-items: flex-start; 
 }
-.counter-number { 
-    font-size: 4.5rem; 
-    font-weight: bold; 
-    color: #38b11a ; 
-    position: relative; 
-    overflow: hidden; 
+.counter-number {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #38b11a ;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(14px) scale(.98);
 }
-.counter-number::before { 
-    content: counter(num); 
-    counter-reset: num var(--num); 
-    animation: count 3s ease-out forwards; 
+.counter-number.animate {
+    animation: upIn .6s var(--ease) both;
 }
-.counter-number::after { 
-    content: '+'; opacity: 0; 
-    animation: showPlus 0.3s ease-in 3s forwards; 
-    margin-left: 4px; 
+.counter-number::before {
+    content: '';
+    counter-reset: num var(--num);
+}
+.counter-number.animate::before {
+    content: counter(num);
+    animation: count 2s ease-out forwards;
+}
+.counter-number::after {
+    content: '+'; opacity: 0;
+    margin-left: 4px;
+}
+.counter-number.animate::after {
+    animation: showPlus 0.3s ease-in 1.8s forwards;
 }
 
 
 @keyframes count { 0% { --num: 0; } 100% { --num: 25; } }
 @keyframes showPlus { to { opacity: 1; } }
 @property --num { syntax: '<integer>'; initial-value: 0; inherits: false; }
-.counter-label {inherits: false; font-size: 3rem; color: #F3F3F3; margin-top: 4px; opacity: 0; animation: showLabel 0.3s ease-in 2.3s forwards; }
+.counter-label {inherits: false; font-size: 3rem; color: #F3F3F3; margin-top: 4px; opacity: 0; }
+.counter-label.animate { animation: showLabel 0.3s ease-in 1.8s forwards; }
 @keyframes showLabel { to { opacity: 1; } }
 @supports not (background: paint(something)) {
-.counter-number::before { animation: countFallback 2.3s ease-out forwards; }
+.counter-number::before { animation: countFallback 2s ease-out forwards; }
 @keyframes countFallback { 
   0% { content: '0'; } 
   4% { content: '1'; }
@@ -67,4 +83,4 @@
   92% { content: '23'; } 
   96% { content: '24'; } 
   100% { content: '25'; } 
-}
+}}
