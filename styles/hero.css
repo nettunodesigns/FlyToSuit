@@ -268,25 +268,7 @@ body{
   font-size: large;
 }
 
-footer{
-  height: 100px;
-  gap: 40px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
 
-footer img{
-  height: 50%;
-}
-
-footer #links{
-  width: 20%;
-  display: flex;
-  justify-content: space-evenly;
-  color: var(--nero);
-  font-weight: bold;
-}
 
 /* RESPONSIVE DESIGN */
 
@@ -420,21 +402,6 @@ footer #links{
     width: 80%;
     font-size: medium;
   }
-
-  footer {
-    flex-direction: column;
-    height: auto;
-    padding: 20px 0;
-    gap: 20px;
-  }
-
-  footer img {
-    height: 40px;
-  }
-
-  footer #links {
-    width: 60%;
-  }
 }
 
 /* Small Mobile Styles (480px and below) */
@@ -508,15 +475,5 @@ footer #links{
   .about-us #desc {
     width: 90%;
     font-size: small;
-  }
-
-  footer #links {
-    width: 80%;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  footer #links a {
-    font-size: 14px;
   }
 }
