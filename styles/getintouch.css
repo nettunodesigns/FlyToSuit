@@ -43,12 +43,22 @@ div{
 
 .mini{
     height: 50%;
+}
+
+#getintouch{
+    background-color: var(--cappuccino)
+}
+
+#social{
     background-color: var(--giallo);
+}
+
+#contact{
+    background-color: var(--verde);    
 }
 
 .big{
     height: 80%;
-    background-color: var(--verde);    
 }
 
 footer{
@@ -66,7 +76,4 @@ footer{
   div{
     width: 70%;
   }
-}
-
-@media (max-width: 480px) {
 }
