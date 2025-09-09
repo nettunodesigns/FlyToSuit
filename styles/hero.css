@@ -268,7 +268,9 @@ body{
   font-size: large;
 }
 
-
+.about-us #testo #slogan{
+  margin-bottom: 15px;
+}
 
 /* RESPONSIVE DESIGN */
 

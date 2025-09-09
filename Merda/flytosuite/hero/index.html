@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyToSuit — Luxury Stays</title>
+    <!-- Title font (from Font/TitleFont.html + TitleFont.css) -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@700&display=swap');</style>
+    <link rel="stylesheet" href="../Font/TitleFont.css">
+    <!-- Header CTA styles (from Ui/ButtonBookNow.css) -->
+    <link rel="stylesheet" href="../Ui/ButtonBookNow.css">
+    <!-- Page styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
+    <link rel="icon" href="../Svgs/Logo_FlyToSuit.svg">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header header--hidden header--transparent">
+        <div class="container nav">
+            <div class="nav-left">
+                <img class="logo" src="../Svgs/Logo_FlyToSuit.svg" alt="FlyToSuit logo">
+                <span class="brand">FlyToSuit</span>
+            </div>
+            <nav class="nav-center" aria-label="Primary">
+                <a href="#rooms">Rooms</a>
+                <a href="#aboutus">AboutUs</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <!-- Using provided UI snippet (ButtonBookNow.html/CSS) -->
+                <button class="header-cta"> Book Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero" id="top">
+        <div class="hero-frame" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <nav class="hero-links" aria-label="Hero quick links">
+                <a class="underline-btn" href="#rooms">Rooms</a>
+                <a class="underline-btn" href="#aboutus">About Us</a>
+                <a class="underline-btn" href="#contact">Contact</a>
+            </nav>
+            <h1 class="headline sansita-bold" aria-label="Your Home Far From Home">
+                <span>Your Home</span><br>
+                <span>Far From <span class="accent">Home</span></span>
+            </h1>
+            <p class="subhead sansita-bold">Dream apartments just 5 minutes from Bologna Marconi Airport and convenient to all amenities</p>
+        </div>
+
+        <!-- Booking widget (scoped styles in styles.css) -->
+        <!-- Language selector - placed slightly above the booking widget -->
+        <div class="lang-selector" aria-label="Select language">
+            <button class="lang-btn us" id="langBtn">
+                <span class="lang-text">Language</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-option" data-code="us"><div class="flag flag-us"></div><span>English</span></div>
+                <div class="lang-option" data-code="it"><div class="flag flag-it"></div><span>Italiano</span></div>
+                <div class="lang-option" data-code="es"><div class="flag flag-es"></div><span>Español</span></div>
+                <div class="lang-option" data-code="fr"><div class="flag flag-fr"></div><span>Français</span></div>
+                <div class="lang-option" data-code="de"><div class="flag flag-de"></div><span>Deutsch</span></div>
+                <div class="lang-option" data-code="pt"><div class="flag flag-pt"></div><span>Português</span></div>
+            </div>
+        </div>
+
+        <div class="booking-widget" aria-label="Quick booking">
+            <div class="booking-form">
+                <div class="form-section">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                    <div class="content">
+                        <span class="label">Room</span>
+                        <div class="value">
+                            Pine Log
+                            <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <div class="content">
+                        <span class="label">Check-in</span>
+                        <div class="value">15 Mar 2025</div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <div class="content">
+                        <span class="label">Check-out</span>
+                        <div class="value">30 Mar 2025</div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    <div class="content">
+                        <span class="label">Guests</span>
+                        <div class="value">4 Adults</div>
+                    </div>
+                </div>
+
+                <button class="book-button" type="button">Book Your Stay</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder content below the hero -->
+    <main>
+        <section id="rooms" class="rooms-section" aria-label="Rooms preview">
+            <div class="rooms-split">
+                <div class="rooms-left">
+                    <div class="counter-element">
+                        <img src="../Svgs/Letti/bed.svg" class="bed-icon" alt="Beds icon">
+                        <div class="counter-content">
+                            <div class="counter-number"></div>
+                            <div class="rooms-title sansita-bold title-sub counter-label" style="width: auto;">Beds</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rooms-divider" aria-hidden="true"></div>
+                <div class="rooms-right">
+                    <h3 class="rooms-title sansita-bold">
+                        <span class="title-sub shine-text">Premium</span><br>
+                        <span class="title-sub">Accomodation</span>
+                    </h3>
+                    <p class="rooms-desc">Are you looking for a welcoming and distinctive room, where every space has its own character? We offer rooms for rent, each unique, designed to meet your every need for comfort and style.</p>
+                </div>
+            </div>
+
+            <div class="rooms-widget">
+                <div class="background-slider">
+                    <div class="background-image"></div>
+                    <div class="background-image"></div>
+                    <div class="background-image"></div>
+                </div>
+                <div class="content">
+                    <h2 class="rooms-text">Rooms</h2>
+                </div>
+                <div class="indicator-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Who Are We Section -->
+    <section id="aboutus" class="who-section" aria-label="About Us">
+        <div class="who-bg" aria-hidden="true"></div>
+        <div class="who-overlay" aria-hidden="true"></div>
+        <div class="who-content">
+            <div class="who-text">
+                <h2 class="headline sansita-bold who-title">About <span class="accent" >Us</span ></h2>
+                <p class="subhead who-sub">Fly To Suit manages a curated selection of apartments and homes for short- and mid-term stays, with easy booking, smart check-in, professional cleaning, and dedicated support. <br><br>Whether you travel for business or leisure, we’ve got you covered!!! <br><br>And owners get transparent, hassle-free management.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+        <div class="container footer">
+            <div class="footer-left">
+                <img class="footer-logo" src="../Svgs/Logo_FlyToSuit.svg" alt="FlyToSuit logo small">
+                <span class="brand">FlyToSuit</span>
+            </div>
+            <div class="footer-right">
+                <a href="#rooms">Rooms</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<!-- End of page -->
+</html>
